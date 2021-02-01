@@ -10,7 +10,7 @@ class PostController extends GetxController {
   var isLoading = true.obs;
   int i;
   var text = "".obs;
-  var textController = TextEditingController().obs;
+  var textController = TextEditingController();
   @override
   void onInit() {
     i = 0;
@@ -41,11 +41,11 @@ class PostController extends GetxController {
     print("ok");
     if (isRefresh) {
       i = 1;
-      textController.value.text = "";
+      textController.text = "";
       postModel([]);
     } else {
       i++;
-      textController.value.text = "";
+      textController.text = "";
       postModel([]);
       postModel.addAll(completePostModel);
     }

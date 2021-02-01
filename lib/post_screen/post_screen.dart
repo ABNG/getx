@@ -25,17 +25,15 @@ class PostScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Obx(
-          () => TextField(
-            controller: model.textController.value,
-            style: TextStyle(color: Colors.black),
-            onChanged: (value) {
-              model.text(value);
-            },
-            decoration: InputDecoration(
-              filled: true,
-              fillColor: Colors.white,
-            ),
+        title: TextField(
+          controller: model.textController,
+          style: TextStyle(color: Colors.black),
+          onChanged: (value) {
+            model.text(value);
+          },
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: Colors.white,
           ),
         ),
       ),
