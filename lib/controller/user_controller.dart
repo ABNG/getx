@@ -31,4 +31,8 @@ class UserController extends GetxController {
     }
     isLoading(false);
   }
+  @override
+  void onClose() {
+    super.onClose();
+  }
 }

@@ -3,6 +3,7 @@ import 'package:flutter_getx/controller/post_controller.dart';
 import 'package:flutter_getx/controller/user_controller.dart';
 import 'package:get/get.dart';
 
+//bindings used to instantiate user controllers
 class MyBinding implements Bindings {
   @override
   void dependencies() {

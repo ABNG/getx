@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/bindings/app_state_Binding.dart';
-import 'package:flutter_getx/new_user_Screen.dart';
-import 'package:flutter_getx/post_screen/post_screen.dart';
-import 'package:flutter_getx/second_screen.dart';
-import 'package:flutter_getx/thirdscreen.dart';
-import 'package:flutter_getx/user_screen.dart';
+import 'package:flutter_getx/routes/app_pages.dart';
 import 'package:get/get.dart';
-
-import 'UserProfile.dart';
-import 'first_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,33 +28,9 @@ class MyApp extends StatelessWidget {
           // }
         }
       },
-      unknownRoute: GetPage(name: "/notfound", page: () => MyHomePage()),
-      initialRoute: "/first",
-      getPages: [
-        GetPage(name: "/first", page: () => MyHomePage()),
-        GetPage(
-          name: "/second",
-          page: () => MySecondScreen(),
-          transition: Transition.zoom,
-        ),
-        GetPage(name: "/third", page: () => ThirdScreen()),
-        GetPage(
-          name: '/profile/:user',
-          page: () => UserProfile(),
-        ),
-        GetPage(
-          name: '/user',
-          page: () => UserScreen(),
-        ),
-        GetPage(
-          name: '/new/user',
-          page: () => NewUserScreen(),
-        ),
-        GetPage(
-          name: '/post',
-          page: () => PostScreen(),
-        ),
-      ],
+      unknownRoute: AppPages.UNKNOWNPAGE,
+      initialRoute: AppPages.INITIALPAGE,
+      getPages: AppPages.ROUTES,
     );
   }
 }

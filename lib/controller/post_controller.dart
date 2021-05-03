@@ -60,4 +60,9 @@ class PostController extends GetxController {
     completePostModel.addAll(postModel);
     if (i == 1) isLoading(false);
   }
+
+  @override
+  void onClose() {
+    super.onClose();
+  }
 }
